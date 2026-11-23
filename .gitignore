@@ -1,0 +1,21 @@
+# 正式設定檔（含資料庫與 SMTP 帳密），只提交 config.sample.php
+htdocs/config.php
+
+# 執行期產生的檔案
+htdocs/private_data/sessions/*
+htdocs/private_data/backups/*
+htdocs/private_data/*.log
+htdocs/uploads/products/*
+htdocs/uploads/site/*
+!htdocs/private_data/sessions/.keep
+!htdocs/private_data/backups/.keep
+!htdocs/uploads/products/.keep
+!htdocs/uploads/site/.keep
+
+# 本機工具
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
