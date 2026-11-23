@@ -1,0 +1,24 @@
+# 禁止直接瀏覽目錄
+Options -Indexes
+DirectoryIndex index.php
+
+# robots.txt、sitemap.xml 由 PHP 動態產生（需要 mod_rewrite）
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^robots\.txt$ robots.php [L]
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+  # 共用函式庫、非公開目錄與 PHPMailer 原始碼不對外
+  RewriteRule ^(lib|vendor|private_data)(/|$) - [F,L]
+</IfModule>
+
+# 禁止直接存取設定檔、啟動檔、SQL、Markdown、紀錄與隱藏檔
+<FilesMatch "^(config\.php|config\.sample\.php|app\.php)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "\.(sql|md|log|ini|bak|gz)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+RedirectMatch 403 ^.*/(lib|vendor|private_data)/.*$

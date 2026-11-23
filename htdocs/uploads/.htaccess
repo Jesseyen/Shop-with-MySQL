@@ -1,0 +1,6 @@
+# 上傳目錄：只允許系統產生的圖片檔名（24 位十六進位＋副檔名），其他檔案（含任何 .php）一律拒絕存取，因此不會被執行
+Options -Indexes
+Require all denied
+<FilesMatch "(?i)^[a-f0-9]{24}(_t)?\.(jpe?g|png|webp)$">
+  Require all granted
+</FilesMatch>
