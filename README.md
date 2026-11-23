@@ -259,4 +259,10 @@ cd tests && ./run_all.sh                     # 重建本機資料庫後依序執
 
 ## 授權
 
-商場程式尚未指定授權。`htdocs/vendor/phpmailer/` 為 PHPMailer，依其 [LGPL 2.1 授權](htdocs/vendor/phpmailer/LICENSE) 散布。
+Copyright (C) 2026 Jesse Yen
+
+本專案以 [GNU Affero General Public License v3.0](LICENSE)（AGPL-3.0）授權。你可以自由使用、修改與散布本程式；但若散布修改後的版本，或用修改後的版本透過網路提供服務（例如架設商場網站），必須以相同的 AGPL-3.0 授權，向使用者提供對應的完整原始碼。
+
+本專案不提供任何擔保，詳見 [LICENSE](LICENSE)。
+
+第三方元件：`htdocs/vendor/phpmailer/` 為 [PHPMailer](https://github.com/PHPMailer/PHPMailer)，依其 [LGPL 2.1 授權](htdocs/vendor/phpmailer/LICENSE) 散布。
