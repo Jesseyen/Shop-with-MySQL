@@ -1,5 +1,7 @@
 # Shop with MySQL：台灣好物商場
 
+**繁體中文** | [English](README.en.md)
+
 用 PHP + MariaDB / MySQL 寫成的完整購物商場，針對 [InfinityFree](https://www.infinityfree.com/) 免費主機設計：不使用資料庫 `TRIGGER`、`EVENT`、排程或常駐服務，需要定時的工作都改成「開啟頁面時被動檢查」。
 
 - **目前版本**：6.0.2（2026-11-23），包含第一～六階段全部功能
